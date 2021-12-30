@@ -58,7 +58,7 @@ func migrate(cmd *cobra.Command, args []string) {
 		URL:     globalConfig.DB.URL,
 	}
 	deets.Options = map[string]string{
-		"migration_table_name": "schema_migrations",
+		"migration_table_name": "schema_migration",
 	}
 
 	db, err := pop.NewConnection(deets)

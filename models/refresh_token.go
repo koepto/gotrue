@@ -27,7 +27,7 @@ type RefreshToken struct {
 }
 
 func (RefreshToken) TableName() string {
-	tableName := "refresh_tokens"
+	tableName := "refresh_token"
 	return tableName
 }
 

@@ -25,7 +25,7 @@ type Instance struct {
 }
 
 func (Instance) TableName() string {
-	tableName := "instances"
+	tableName := "instance"
 	return tableName
 }
 

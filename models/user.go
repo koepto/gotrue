@@ -99,7 +99,7 @@ func NewSystemUser(instanceID uuid.UUID, aud string) *User {
 
 // TableName overrides the table name used by pop
 func (User) TableName() string {
-	tableName := "users"
+	tableName := "user"
 	return tableName
 }
 

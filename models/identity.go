@@ -20,7 +20,7 @@ type Identity struct {
 }
 
 func (Identity) TableName() string {
-	tableName := "identities"
+	tableName := "identity"
 	return tableName
 }
 

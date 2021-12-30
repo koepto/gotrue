@@ -59,7 +59,7 @@ type AuditLogEntry struct {
 }
 
 func (AuditLogEntry) TableName() string {
-	tableName := "audit_log_entries"
+	tableName := "audit_log_entry"
 	return tableName
 }
 
