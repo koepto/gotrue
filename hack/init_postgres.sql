@@ -1,5 +1,5 @@
-CREATE USER supabase_admin LOGIN CREATEROLE CREATEDB REPLICATION BYPASSRLS;
-CREATE SCHEMA IF NOT EXISTS auth AUTHORIZATION supabase_admin;
+CREATE USER koepto_admin LOGIN CREATEROLE CREATEDB REPLICATION BYPASSRLS;
+CREATE SCHEMA IF NOT EXISTS auth AUTHORIZATION koepto_admin;
 
 -- auth.users definition
 
@@ -99,17 +99,17 @@ create or replace function auth.role() returns text as $$
   select nullif(current_setting('request.jwt.claim.role', true), '')::text;
 $$ language sql stable;
 
--- Supabase super admin
-CREATE USER supabase_auth_admin NOINHERIT CREATEROLE LOGIN NOREPLICATION;
-GRANT ALL PRIVILEGES ON SCHEMA auth TO supabase_auth_admin;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA auth TO supabase_auth_admin;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA auth TO supabase_auth_admin;
-ALTER USER supabase_auth_admin SET search_path = "auth";
-ALTER USER supabase_auth_admin with password 'root';
-ALTER table "auth".users OWNER TO supabase_auth_admin;
-ALTER table "auth".refresh_tokens OWNER TO supabase_auth_admin;
-ALTER table "auth".audit_log_entries OWNER TO supabase_auth_admin;
-ALTER table "auth".instances OWNER TO supabase_auth_admin;
-ALTER table "auth".schema_migrations OWNER TO supabase_auth_admin;
-ALTER FUNCTION auth.uid OWNER TO supabase_auth_admin;
-ALTER FUNCTION auth.role OWNER TO supabase_auth_admin;
+-- Koepto super admin
+CREATE USER koepto_auth_admin NOINHERIT CREATEROLE LOGIN NOREPLICATION;
+GRANT ALL PRIVILEGES ON SCHEMA auth TO koepto_auth_admin;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA auth TO koepto_auth_admin;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA auth TO koepto_auth_admin;
+ALTER USER koepto_auth_admin SET search_path = "auth";
+ALTER USER koepto_auth_admin with password 'root';
+ALTER table "auth".users OWNER TO koepto_auth_admin;
+ALTER table "auth".refresh_tokens OWNER TO koepto_auth_admin;
+ALTER table "auth".audit_log_entries OWNER TO koepto_auth_admin;
+ALTER table "auth".instances OWNER TO koepto_auth_admin;
+ALTER table "auth".schema_migrations OWNER TO koepto_auth_admin;
+ALTER FUNCTION auth.uid OWNER TO koepto_auth_admin;
+ALTER FUNCTION auth.role OWNER TO koepto_auth_admin;

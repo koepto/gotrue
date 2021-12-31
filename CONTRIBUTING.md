@@ -45,10 +45,10 @@ Or, if you prefer, download [Docker Desktop](https://www.docker.com/get-started)
 go install github.com/gobuffalo/pop/soda@latest
 ```
 
-- Clone the GoTrue [repository](https://github.com/supabase/gotrue)
+- Clone the GoTrue [repository](https://github.com/koepto/gotrue)
 
 ```
-git clone https://github.com/supabase/gotrue
+git clone https://github.com/koepto/gotrue
 ```
 
 ### Install GoTrue
@@ -154,7 +154,7 @@ That lists each migration that was applied. Note: there may be more migrations t
 5. In order to have GoTrue connect to your PostgreSQL database running in Docket, it is important to set a connection string like:
 
 ```
-DATABASE_URL="postgres://supabase_auth_admin:root@localhost:5432/postgres"
+DATABASE_URL="postgres://koepto_auth_admin:root@localhost:5432/postgres"
 ```
 
 > Important: GoTrue requires a set of SMTP credentials to run, you can generate your own SMTP credentials via an SMTP provider such as AWS SES, SendGrid, MailChimp, SendInBlue or any other SMTP providers.
@@ -225,13 +225,13 @@ To test the admin endpoints (or other api endpoints), you can invoke via HTTP re
 
 You will need to know the `GOTRUE_JWT_SECRET` configured in the `.env` settings.
 
-Also, you must generate a JWT with the signature which has the `supabase_admin` role (or one that is specified in `GOTRUE_JWT_ADMIN_ROLES`).
+Also, you must generate a JWT with the signature which has the `koepto_admin` role (or one that is specified in `GOTRUE_JWT_ADMIN_ROLES`).
 
 For example:
 
 ```json
 {
-  "role": "supabase_admin"
+  "role": "koepto_admin"
 }
 ```
 
@@ -423,12 +423,12 @@ port: {{ envOr "POSTGRES_PORT" "7432" }} 👈 set to your port
 
 ```
 // file: test.env
-DATABASE_URL="postgres://supabase_auth_admin:root@localhost:7432/postgres" 👈 set to your port
+DATABASE_URL="postgres://koepto_auth_admin:root@localhost:7432/postgres" 👈 set to your port
 ```
 
 ```
 // file: migrate.sh
-export GOTRUE_DB_DATABASE_URL="postgres://supabase_auth_admin:root@localhost:7432/$DB_ENV"
+export GOTRUE_DB_DATABASE_URL="postgres://koepto_auth_admin:root@localhost:7432/$DB_ENV"
 ```
 
 ## Helpful Docker Commands
@@ -463,7 +463,7 @@ We actively welcome your pull requests.
 
 - Is there a corresponding issue created for it? If so, please include it in the PR description so we can track / refer to it.
 - Does your PR follow the [semantic-release commit guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)?
-- If the PR is a `feat`, an [RFC](https://github.com/supabase/rfcs) or a detailed description of the design implementation is required. The former (RFC) is prefered before starting on the PR.
+- If the PR is a `feat`, an [RFC](https://github.com/koepto/rfcs) or a detailed description of the design implementation is required. The former (RFC) is prefered before starting on the PR.
 - Are the existing tests passing?
 - Have you written some tests for your PR?
 

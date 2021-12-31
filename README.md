@@ -13,8 +13,8 @@ Create a `.env` file to store your own custom env vars. See [`example.env`](exam
 1. Start the local postgres database in a postgres container: `./hack/postgresd.sh` 
 2. Build the gotrue binary: `make build` . You should see an output like this:
 ```
-go build -ldflags "-X github.com/supabase/gotrue/cmd.Version=`git rev-parse HEAD`"
-GOOS=linux GOARCH=arm64 go build -ldflags "-X github.com/supabase/gotrue/cmd.Version=`git rev-parse HEAD`" -o gotrue-arm64
+go build -ldflags "-X github.com/koepto/gotrue/cmd.Version=`git rev-parse HEAD`"
+GOOS=linux GOARCH=arm64 go build -ldflags "-X github.com/koepto/gotrue/cmd.Version=`git rev-parse HEAD`" -o gotrue-arm64
 ```
 3. Execute the gotrue binary: `./gotrue` (if you're on x86) `./gotrue-arm64` (if you're on arm)
 
@@ -35,7 +35,7 @@ The base URL your site is located at. Currently used in combination with other s
 
 `URI_ALLOW_LIST` - `string`
 
-A comma separated list of URIs (e.g. "https://supabase.io/welcome,io.supabase.gotruedemo://logincallback") which are permitted as valid `redirect_to` destinations, in addition to SITE_URL. Defaults to [].
+A comma separated list of URIs (e.g. "https://koepto.com/welcome,io.koepto.gotruedemo://logincallback") which are permitted as valid `redirect_to` destinations, in addition to SITE_URL. Defaults to [].
 
 `OPERATOR_TOKEN` - `string` _Multi-instance mode only_
 
@@ -533,7 +533,7 @@ body:
   "data": {
     ...
   }, // only if type = signup
-  "redirect_to": "https://supabase.io" // Redirect URL to send the user to after an email action. Defaults to SITE_URL.
+  "redirect_to": "https://koepto.com" // Redirect URL to send the user to after an email action. Defaults to SITE_URL.
 
 }
 ```
@@ -606,7 +606,7 @@ if AUTOCONFIRM is enabled and the sign up is a duplicate, then the endpoint will
 ### **POST /invite**
 
 Invites a new user with an email.
-This endpoint requires the `service_role` or `supabase_admin` JWT set as an Auth Bearer header:
+This endpoint requires the `service_role` or `koepto_admin` JWT set as an Auth Bearer header:
 
 e.g.
 
@@ -667,7 +667,7 @@ Verify a phone signup or sms otp. Type should be set to `sms`.
 {
   "type": "sms",
   "token": "confirmation-otp-delivered-in-sms",
-  "redirect_to": "https://supabase.io",
+  "redirect_to": "https://koepto.com",
   "phone": "phone-number-sms-otp-was-delivered-to"
 }
 ```
@@ -694,7 +694,7 @@ query params:
 {
   "type": "signup",
   "token": "confirmation-code-delivered-in-email",
-  "redirect_to": "https://supabase.io"
+  "redirect_to": "https://koepto.com"
 }
 ```
 
@@ -704,7 +704,7 @@ User will be logged in and redirected to:
 SITE_URL/#access_token=jwt-token-representing-the-user&token_type=bearer&expires_in=3600&refresh_token=a-refresh-token&type=invite
 ```
 
-Your app should detect the query params in the fragment and use them to set the session (supabase-js does this automatically)
+Your app should detect the query params in the fragment and use them to set the session (koepto-js does this automatically)
 
 You can use the `type` param to redirect the user to a password set form in the case of `invite` or `recovery`,
 or show an account confirmed/welcome message in the case of `signup`, or direct them to some additional onboarding flow
@@ -894,7 +894,7 @@ scopes=<optional additional scopes depending on the provider (email and name are
 
 Redirects to provider and then to `/callback`
 
-For apple specific setup see: https://github.com/supabase/gotrue#apple-oauth
+For apple specific setup see: https://github.com/koepto/gotrue#apple-oauth
 
 ### **GET /callback**
 

@@ -248,7 +248,7 @@ func (config *Configuration) ApplyDefaults() {
 	}
 
 	if config.JWT.AdminRoles == nil || len(config.JWT.AdminRoles) == 0 {
-		config.JWT.AdminRoles = []string{"service_role", "supabase_admin"}
+		config.JWT.AdminRoles = []string{"service_role", "koepto_admin"}
 	}
 
 	if config.JWT.Exp == 0 {
