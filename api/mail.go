@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/netlify/gotrue/crypto"
-	"github.com/netlify/gotrue/mailer"
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/crypto"
+	"github.com/koepto/gotrue/mailer"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
 	"github.com/pkg/errors"
 	"github.com/sethvargo/go-password/password"
 )

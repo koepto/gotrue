@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"github.com/netlify/gotrue/conf"
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/conf"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
 	"github.com/gofrs/uuid"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

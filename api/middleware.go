@@ -10,14 +10,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/netlify/gotrue/security"
+	"github.com/koepto/gotrue/security"
 	"github.com/sirupsen/logrus"
 
 	"github.com/didip/tollbooth/v5"
 	"github.com/didip/tollbooth/v5/limiter"
 	"github.com/gofrs/uuid"
 	jwt "github.com/golang-jwt/jwt"
-	"github.com/netlify/gotrue/models"
+	"github.com/koepto/gotrue/models"
 )
 
 const (

@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gofrs/uuid"
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
 )
 
 // UserUpdateParams parameters for updating a user

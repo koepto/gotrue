@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/badoux/checkmail"
-	"github.com/netlify/gotrue/conf"
-	"github.com/netlify/gotrue/models"
+	"github.com/koepto/gotrue/conf"
+	"github.com/koepto/gotrue/models"
 	"github.com/netlify/mailme"
 )
 

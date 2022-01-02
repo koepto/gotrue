@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/netlify/gotrue/api/sms_provider"
-	"github.com/netlify/gotrue/crypto"
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/api/sms_provider"
+	"github.com/koepto/gotrue/crypto"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
 	"github.com/pkg/errors"
 )
 

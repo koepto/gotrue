@@ -11,9 +11,9 @@ import (
 
 	"github.com/gofrs/uuid"
 	jwt "github.com/golang-jwt/jwt"
-	"github.com/netlify/gotrue/api/provider"
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/api/provider"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
 	"github.com/sirupsen/logrus"
 )
 

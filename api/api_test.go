@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/netlify/gotrue/conf"
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
-	"github.com/netlify/gotrue/storage/test"
+	"github.com/koepto/gotrue/conf"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
+	"github.com/koepto/gotrue/storage/test"
 	"github.com/stretchr/testify/require"
 )
 

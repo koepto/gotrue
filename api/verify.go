@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
 	"github.com/sethvargo/go-password/password"
 )
 

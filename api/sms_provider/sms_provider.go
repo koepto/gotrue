@@ -3,7 +3,7 @@ package sms_provider
 import (
 	"fmt"
 
-	"github.com/netlify/gotrue/conf"
+	"github.com/koepto/gotrue/conf"
 )
 
 type SmsProvider interface {

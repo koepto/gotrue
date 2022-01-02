@@ -7,8 +7,8 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/gofrs/uuid"
-	"github.com/netlify/gotrue/conf"
-	"github.com/netlify/gotrue/models"
+	"github.com/koepto/gotrue/conf"
+	"github.com/koepto/gotrue/models"
 	"github.com/pkg/errors"
 )
 

@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/mrjones/oauth"
-	"github.com/netlify/gotrue/conf"
+	"github.com/koepto/gotrue/conf"
 	"golang.org/x/oauth2"
 )
 

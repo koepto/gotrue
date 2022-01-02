@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/netlify/gotrue/conf"
+	"github.com/koepto/gotrue/conf"
 )
 
 const (

@@ -7,7 +7,7 @@ import (
 
 	"github.com/gobuffalo/pop/v5"
 	"github.com/gofrs/uuid"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/storage"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/bcrypt"
 )

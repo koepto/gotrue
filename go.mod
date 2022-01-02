@@ -1,4 +1,4 @@
-module github.com/netlify/gotrue
+module github.com/koepto/gotrue
 
 require (
 	cloud.google.com/go v0.67.0 // indirect

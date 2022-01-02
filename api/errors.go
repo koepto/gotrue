@@ -7,7 +7,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/netlify/gotrue/conf"
+	"github.com/koepto/gotrue/conf"
 	"github.com/pkg/errors"
 )
 

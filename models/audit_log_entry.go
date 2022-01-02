@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/storage"
 	"github.com/pkg/errors"
 )
 

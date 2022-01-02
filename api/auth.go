@@ -7,8 +7,8 @@ import (
 	"time"
 
 	jwt "github.com/golang-jwt/jwt"
-	"github.com/netlify/gotrue/models"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/models"
+	"github.com/koepto/gotrue/storage"
 )
 
 // requireAuthentication checks incoming requests for tokens presented using the Authorization header

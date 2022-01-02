@@ -6,8 +6,8 @@ import (
 	"net/url"
 
 	"github.com/mrjones/oauth"
-	"github.com/netlify/gotrue/api/provider"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/api/provider"
+	"github.com/koepto/gotrue/storage"
 	"github.com/sirupsen/logrus"
 )
 

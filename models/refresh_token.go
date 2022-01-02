@@ -5,8 +5,8 @@ import (
 
 	"github.com/gobuffalo/pop/v5"
 	"github.com/gofrs/uuid"
-	"github.com/netlify/gotrue/crypto"
-	"github.com/netlify/gotrue/storage"
+	"github.com/koepto/gotrue/crypto"
+	"github.com/koepto/gotrue/storage"
 	"github.com/pkg/errors"
 )
 
@@ -41,12 +41,12 @@ func GrantRefreshTokenSwap(tx *storage.Connection, user *User, token *RefreshTok
 	var newToken *RefreshToken
 	err := tx.Transaction(func(rtx *storage.Connection) error {
 		var terr error
-		if terr = NewAuditLogEntry(tx, user.InstanceID, user, TokenRevokedAction, nil); terr != nil {
+		if terr = NewAuditLogEntry(rtx, user.InstanceID, user, TokenRevokedAction, nil); terr != nil {
 			return errors.Wrap(terr, "error creating audit log entry")
 		}
 
 		token.Revoked = true
-		if terr = tx.UpdateOnly(token, "revoked"); terr != nil {
+		if terr = rtx.UpdateOnly(token, "revoked"); terr != nil {
 			return terr
 		}
 		newToken, terr = createRefreshToken(rtx, user, token)
