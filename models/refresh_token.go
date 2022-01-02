@@ -59,7 +59,7 @@ func GrantRefreshTokenSwap(tx *storage.Connection, user *User, token *RefreshTok
 func RevokeTokenFamily(tx *storage.Connection, token *RefreshToken) error {
 	err := tx.RawQuery(`
 	with recursive token_family as (
-		select id, user_id, token, revoked, parent from refresh_tokens where parent = ?
+		select id, user_id, token, revoked, parent from refresh_token where parent = ?
 		union
 		select r.id, r.user_id, r.token, r.revoked, r.parent from `+(&pop.Model{Value: RefreshToken{}}).TableName()+` r inner join token_family t on t.token = r.parent
 	)
